@@ -14,7 +14,7 @@
   const xhttp = new XMLHttpRequest();
   var intervalId = setInterval(function() {
   xhttp.onload = setTimeout(
-    function() { document.getElementById("titolo").innerHTML = this.responseText; }, 20000);
+    function() { document.getElementById("titolo").innerHTML = this.responseText; }, 0);
   xhttp.open("GET", "https://ipcast.de/metadata/onair_ESCRADIO.txt", false);
   xhttp.setRequestHeader("Access-Control-Request-Headers", "*");
   xhttp.send();
