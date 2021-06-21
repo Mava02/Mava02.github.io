@@ -17,7 +17,7 @@
   xhttp.onload = function() {
     document.getElementById("titolo").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "https://www.escradio.com/player/js/fallback.php", false);
+  xhttp.open("GET", "http://ipcast.de/metadata/onair_ESCRADIO.txt", false);
   xhttp.setRequestHeader("Access-Control-Allow-Origin", "https://www.escradio.com");
   xhttp.send();
   console.log("fetched");
