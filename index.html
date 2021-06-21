@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head><title>ESC Radio</title></head>
+<body>
+  <h1 id="titolo">ESC Radio</h1>
+<script>
+  const xhttp = new XMLHttpRequest();
+  var intervalId = setInterval(function() {
+  xhttp.onload = function() {
+    document.getElementById("titolo").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "https://www.escradio.com/player/js/fallback.php", false);
+  xhttp.send();
+  console.log("fetched");
+  }, 5000);
+</script>
+</body>
