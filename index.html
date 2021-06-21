@@ -9,6 +9,7 @@
     document.getElementById("titolo").innerHTML = this.responseText;
   }
   xhttp.open("GET", "https://www.escradio.com/player/js/fallback.php", false);
+  xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
   xhttp.send();
   console.log("fetched");
   }, 5000);
